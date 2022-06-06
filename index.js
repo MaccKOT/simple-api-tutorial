@@ -22,7 +22,6 @@ app.get('/outfit', (req, res) => {
     top: getRandomItem(STORE.tops),
     jeans: getRandomItem(STORE.jeans),
     shoes: getRandomItem(STORE.shoes),
-    // !todo: write own function and remove lodash
   });
 });
 
