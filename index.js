@@ -1,7 +1,7 @@
 const fs = require('fs/promises');
 const express = require('express');
 const cors = require('cors');
-const _ = require('lodash');
+const getRandomItem = require('./utils/getRandom');
 const { v4: uuid } = require('uuid');
 
 const app = express();
@@ -19,9 +19,9 @@ const STORE = {
 app.get('/outfit', (req, res) => {
   return res.json({
     // _.sample return random item from collection
-    top: _.sample(STORE.tops),
-    jeans: _.sample(STORE.jeans),
-    shoes: _.sample(STORE.shoes),
+    top: getRandomItem(STORE.tops),
+    jeans: getRandomItem(STORE.jeans),
+    shoes: getRandomItem(STORE.shoes),
     // !todo: write own function and remove lodash
   });
 });
