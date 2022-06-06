@@ -56,6 +56,8 @@ app.post('/comments', async (req, res) => {
   });
 });
 
+// !TODO: make endpoints for update or delete comments by id
+
 app.listen(PORT, () =>
   console.log(`API Server is running at http://localhost:${PORT}/ ...`)
 );
